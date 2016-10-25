@@ -1,0 +1,30 @@
+{{! < default}}
+
+<div class="page-wrapper" ng-view></div>
+
+<div data-fade-in-page class="fade home wrapper">
+	<div class='logo-container'>
+		<h1> msgbored</h1>
+		<h2> Board: <span id="boardName">{{boardName}}</span></h2>
+		<p> Go to: <a href="/"> default </a> &nbsp; Other: <input placeholder="boardname" id="boardnameinput" type="text"/> <input id="gotoboard" type="button" value="try it"> </p>
+		<br>
+
+		<p> Don't forget to say who you are </p>
+		<p>	<em> Timezone: {{timeZone}} </em> </p>
+		
+	
+	
+	<div class="message-container">
+		 <input placeholder="message" id="msgbox" type="textarea"/> <input id="msgsend" type="button" value="say something">
+ 	</div>
+	
+	
+	<br>
+	
+	{{#each comments }}
+		On {{dateString}} <div style="margin-left:10px; background-color: rgb(195, 195, 195)"> {{text}} </div> <br>
+	{{/each}}
+</div>
+
+
+
