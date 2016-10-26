@@ -46,7 +46,7 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 	'cookie secret': 'asdfasdfas=8$asdfasdfasdfasdfTI]H4a.PB3[',
-	'mongo': process.env.MONGO_URI || 'mongodb://localhost/msgbored'
+	'mongo': process.env.MONGO_URL || process.env.MONGO_URI || 'mongodb://localhost/msgbored'
 });
 
 keystone.import('models');
